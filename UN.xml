@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="10.0.2" class="java.beans.XMLDecoder">
+ <object class="ba.unsa.etf.rpr.tutorijal07.UN" id="UN0">
+  <void property="drzave">
+   <void method="add">
+    <object class="ba.unsa.etf.rpr.tutorijal07.Drzava">
+     <void property="brojStanovnika">
+      <int>3500000</int>
+     </void>
+     <void property="glavniGrad">
+      <object class="ba.unsa.etf.rpr.tutorijal07.Grad">
+       <void property="brojStanovnika">
+        <int>300000</int>
+       </void>
+       <void property="naziv">
+        <string>Sarajevo</string>
+       </void>
+       <void property="temperature">
+        <null/>
+       </void>
+      </object>
+     </void>
+     <void property="jedinicaZaPovrsinu">
+      <string>km^2</string>
+     </void>
+     <void property="naziv">
+      <string>BiH</string>
+     </void>
+     <void property="povrsina">
+      <double>50000.0</double>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="ba.unsa.etf.rpr.tutorijal07.Drzava">
+     <void property="brojStanovnika">
+      <int>5000000</int>
+     </void>
+     <void property="glavniGrad">
+      <object class="ba.unsa.etf.rpr.tutorijal07.Grad">
+       <void property="brojStanovnika">
+        <int>500000</int>
+       </void>
+       <void property="naziv">
+        <string>Zagreb</string>
+       </void>
+       <void property="temperature">
+        <null/>
+       </void>
+      </object>
+     </void>
+     <void property="jedinicaZaPovrsinu">
+      <string>km^2</string>
+     </void>
+     <void property="naziv">
+      <string>Hrvatska</string>
+     </void>
+     <void property="povrsina">
+      <double>70000.0</double>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="ba.unsa.etf.rpr.tutorijal07.Drzava">
+     <void property="brojStanovnika">
+      <int>6000000</int>
+     </void>
+     <void property="glavniGrad">
+      <object class="ba.unsa.etf.rpr.tutorijal07.Grad">
+       <void property="brojStanovnika">
+        <int>900000</int>
+       </void>
+       <void property="naziv">
+        <string>Beograd</string>
+       </void>
+       <void property="temperature">
+        <null/>
+       </void>
+      </object>
+     </void>
+     <void property="jedinicaZaPovrsinu">
+      <string>km^2</string>
+     </void>
+     <void property="naziv">
+      <string>Srbija</string>
+     </void>
+     <void property="povrsina">
+      <double>80000.0</double>
+     </void>
+    </object>
+   </void>
+  </void>
+ </object>
+</java>

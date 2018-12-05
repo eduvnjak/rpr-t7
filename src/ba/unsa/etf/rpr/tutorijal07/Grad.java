@@ -9,6 +9,10 @@ public class Grad implements Serializable {
     public Grad(){
         temperature = new double[1000];
     }
+    public Grad(String naziv, int brojStanovnika){
+        this.naziv = naziv;
+        this.brojStanovnika = brojStanovnika;
+    }
     public String getNaziv() {
         return naziv;
     }
