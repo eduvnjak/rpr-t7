@@ -14,7 +14,7 @@ import static java.util.Locale.US;
 public class Tutorijal {
 
     public static void main(String[] args) {
-        //ArrayList gradovi = ucitajGradove();
+        ArrayList gradovi = ucitajGradove();
         UN un = new UN();
         Grad g1 = new Grad("Sarajevo", 300000);
         Grad g2 = new Grad("Zagreb", 500000);
@@ -28,8 +28,12 @@ public class Tutorijal {
         drzave.add(drzava3);
         un.setDrzave(drzave);
         //zapisiXml(un);
-        UN unNovi = ucitajXml();
-
+        UN unNovi = ucitajXml(gradovi);
+        /*for(Drzava d: unNovi.getDrzave()){
+            for(int i = 0; i < 1000; i++){
+                System.out.println((d.getGlavniGrad()).getTemperature()[i]);
+            }
+        }*/
     }
     public static ArrayList<Grad> ucitajGradove(){
         Scanner ulaz;
@@ -47,7 +51,7 @@ public class Tutorijal {
                 while(ulaz.hasNextDouble()){
                     //System.out.println("TEMPERATURE");
                     temperature[brojac] = ulaz.nextDouble();
-                    System.out.println(temperature[brojac]);
+                    //System.out.println(temperature[brojac]);
                     brojac++;
                     if(brojac == 1000) break;
                 }
@@ -64,7 +68,7 @@ public class Tutorijal {
         }
         return gradoviLista;
     }
-    public static UN ucitajXml(){
+    public static UN ucitajXml(ArrayList<Grad> listaGradovi){
         UN un = new UN();
         XMLDecoder ulaz = null;
         try {
@@ -74,9 +78,15 @@ public class Tutorijal {
         }catch (Exception e){
             System.out.println("Greska: " + e );
         }
-        /*for(Drzava d: un.getDrzave()){
-            System.out.println(d);
-        }*/
+        for(Drzava d: un.getDrzave()){
+            //System.out.println(d);
+            for(Grad g: listaGradovi){
+                if((d.getGlavniGrad()).getNaziv().equals(g.getNaziv())){
+                    (d.getGlavniGrad()).setTemperature(g.getTemperature());
+                    System.out.println("tu ");
+                }
+            }
+        }
         return un;
     }
     public static void zapisiXml(UN un){
